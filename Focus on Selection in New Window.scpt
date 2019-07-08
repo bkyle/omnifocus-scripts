@@ -1,7 +1,7 @@
 // This script will open a new window focused on the current selection or its containing project.
 'use strict';
 
-function run() {
+function run(input, parameters) {
 	let omnifocus = Application("OmniFocus");
 	omnifocus.includeStandardAdditions = true;
 	
@@ -35,5 +35,5 @@ function run() {
 	var newDocumentWindow = omnifocus.DocumentWindow();
 	document.documentWindows.push(newDocumentWindow);
 	newDocumentWindow.focus = containingProject;
-	newDocumentWindow.perspectiveName = "Focus";
+	newDocumentWindow.perspectiveName = perspectiveName;
 }
