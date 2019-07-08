@@ -34,6 +34,6 @@ function run(input, parameters) {
 
 	var newDocumentWindow = omnifocus.DocumentWindow();
 	document.documentWindows.push(newDocumentWindow);
-	newDocumentWindow.focus = containingProject;
 	newDocumentWindow.perspectiveName = perspectiveName;
+	newDocumentWindow.sidebar.selectedTrees = containingProject;
 }
